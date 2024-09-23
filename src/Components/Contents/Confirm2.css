@@ -3,3 +3,6 @@
     width: 100%; /* Ensure the button doesn’t exceed the maximum width */
     margin: 0 auto; /* Center the button horizontally */
 }
+.video-container {
+    margin-top: 80px; /* Adjust the value to set the space you want */
+}

