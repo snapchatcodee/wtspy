@@ -10,7 +10,7 @@ class Navbar extends Component {
             <img src="/wp.png" alt="logo" />
           </i>
         </h1>
-        <h1 className="navbar-title"> مجموعة الواتس اب </h1>
+        <h1 className="navbar-title">مجموع ة الواتساب</h1>
       </nav>
     );
   }
